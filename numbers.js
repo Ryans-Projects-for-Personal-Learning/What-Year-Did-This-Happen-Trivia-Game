@@ -17,8 +17,6 @@ async function getInfo(url) {
     
     let eventObj = JSON.parse(text);
 
-    console.log(eventObj);
-
     let eventText = "____:" + " " + eventObj.text;
 
     document.getElementById("startBtn").style.visibility = "hidden";
@@ -43,15 +41,12 @@ function generateAnswers(eventObj){
             i++;
         }
     }
-    
-    console.log(answers);
 
     //Randomize answers by shuffling
     for(j = answers.length - 1; j > 1; j --){
         let randIndex = Math.floor(Math.random() * (j + 1));
         [answers[j], answers[randIndex]] = [answers[randIndex], answers[j]];
     }
-    console.log(answers);
 
     document.getElementById("btn1").innerText = answers[0];
     document.getElementById("btn2").innerText = answers[1];
@@ -67,7 +62,6 @@ function getAnswer(correctAnswer){
 
 function evaluateAnswer(answer){
     let correctAnswer = document.getElementById("answer").value;
-    console.log(typeof(correctAnswer));
     
     if(Number(answer) == correctAnswer){
         $('.toast').toast('show')
