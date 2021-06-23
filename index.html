@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" crossorigin="anonymous">
+    <title>What Year Did This Happen? Trivia Game</title>
+</head>
+<body>
+<nav class="navbar navbar-light bg-primary">
+    <a class="navbar-brand">What Year Did This Happen? Trivia Game</a>
+</nav>
+
+<div class = "eventDiv">
+    <div class="card" style="width:100%;">
+        <div class="card-header">
+            Score: <span id = "score">0</span>
+          </div>
+        <div class="card-body">
+          <p class="card-text" id="event">Guess the year an event has occurred. Each correctly guessed event earns you 1 point. See how many questions you can guess correctly.</p>
+
+          <center>
+              <p><button id = "startBtn" type="button" class="btn btn-primary btn-lg" onclick="startGame()">Click here to start the game</button></p>
+              
+              <div class="toast bg-success" role="alert" aria-live="assertive" aria-atomic="true" data-delay="1200">
+                <div class="toast-body">
+                  <p class="confirmation">Correct!</p>
+                </div>
+              </div>
+            </center>
+        </div>
+      </div>
+</div>
+
+<center>
+<div class = "answersDiv">
+    <table>
+        <tr>
+            <td><button id = "btn1" type="button" class="answer-btn btn-primary btn-lg" onclick="evaluateAnswer(document.getElementById('btn1').innerText)"></button></td>
+            <td><button id = "btn2" type="button" class="answer-btn btn-primary btn-lg" onclick="evaluateAnswer(document.getElementById('btn2').innerText)"></button></td>
+        </tr>
+        <tr>
+            <td><button id = "btn3" type="button" class="answer-btn btn-primary btn-lg" onclick="evaluateAnswer(document.getElementById('btn3').innerText)"></button></td>
+            <td><button id = "btn4" type="button" class="answer-btn btn-primary btn-lg" onclick="evaluateAnswer(document.getElementById('btn4').innerText)"></button></td>
+        </tr>
+    </table>
+</div>
+</center>
+
+
+<p type = hidden id="answer" value=getAnswer(correctAnswer)></p>
+
+<div class="aboutDiv">
+<div class="card">
+    <div class="card-header">
+      About
+    </div>
+    <div class="card-body">
+      <p>This is a quick project for learning about how to use APIs made by other people for your own projects. The API used is called <a href="http://numbersapi.com/" target="blank">NumbersAPI</a>, which contains facts about different numbers.</p>
+
+      <p>If you get negative numbers for answers, that refers to years before Christ (B.C.), so treat them that way.</p>
+    </div>
+  </div>
+</div>
+
+<script src = "numbers.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

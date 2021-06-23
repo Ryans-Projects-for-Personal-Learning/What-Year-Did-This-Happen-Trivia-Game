@@ -1,0 +1,50 @@
+.answer-btn{
+    visibility: hidden;
+    width: 200px;
+}
+
+.navbar {
+    color: #ffffff;
+}
+
+.descText {
+    font-size: 18px;
+}
+
+.aboutDiv {
+    margin: 20px 25% 0 25%;
+    margin-top: 20px;
+    width: 50%;
+    padding: 10px;
+}
+
+.eventDiv {
+    margin: 20px 25% 0 25%;
+    margin-top: 20px;
+    width: 50%;
+    padding: 10px;
+}
+
+.answersDiv {
+    margin: 20px 25% 0 25%;
+    margin-top: 20px;
+    width: 50%;
+    padding: 10px;
+}
+
+.card-text {
+    font-size: 48px;
+}
+
+.navbar-brand {
+    color: #ffffff;
+}
+
+.toast {
+    margin-top: 10px;
+}
+
+.confirmation {
+    font-size: 24px;
+    color: #ffffff;
+}
